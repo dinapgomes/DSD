@@ -8,13 +8,25 @@ function receberRequisicao(socket) {
     console.log("recebeu: " + data.toString());
     console.log("###");
 
-    const numero = Math.floor(Math.random() * 2);
-    // envia mensagem de retorno para o cliente
-    if (numero.toString() === data.toString()) {
-      this.write("voce acertou! :)");
-    } else {
-      this.write(`voce errou! o número era ${numero} :(`);
+    //const numero = Math.floor(Math.random() * 2);
+    var frase = 2;
+
+    switch(frase){
+      case 1 : console.log("Pus o meu sonho num navio e o navio em cima do mar;- depois, abri o mar com as mãos, para o meu sonho naufragar - Cecília Meireles")
+      break;
+      case 2:  console.log("Uma força irrestível é capaz de sempre conduzir todo aquele que busca a justiça e também te faz sorrir - Ruan Franklin")
+      break;
+      case 3:  console.log("Todas as coisas do mundo não cabem numa ideia. Mas tudo cabe numa palavra, nesta palavra tudo.- Arnaldo Antunes")
+      break;
+      default:
+        console.log("Fim da execução")
     }
+    // envia mensagem de retorno para o cliente
+   // if (numero.toString() === data.toString()) {
+    //  this.write("voce acertou! :)");
+   // } else {
+    //  this.write(`voce errou! o número era ${numero} :(`);
+  //  }
 
     // fecha conexão
     this.end();

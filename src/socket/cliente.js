@@ -21,5 +21,5 @@ socketCliente.on("end", finalizarConexao);
 // conectando, enviando mensagem de requisição
 //   e fechando o socket cliente
 socketCliente.connect(8000, "localhost");
-socketCliente.write("0");
+socketCliente.write("2");
 socketCliente.end();
