@@ -7,6 +7,17 @@
 
 4: Colocar arquivo requeriments: -> pip install -r requirements.txt 
 
+ # Guia para acesso (Windows):
+ 
+ 1: Criar ambiente virtual python -m venv env
+ 2: env\Scripts\activate.bat
+ 3: Instalar biblioteca Pyro4 -> pip install Pyro4
+ 4: Colocar arquivo requeriments: -> pip install -r requirements.txt 
+ 
+
+tutorial-env\Scripts\activate.bat
+
+
 
 # Como entrar
 
