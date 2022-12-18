@@ -18,9 +18,9 @@ random.randint(0,1000))
     def subtracao(self, a,b):
         return "{0} - {1} = {2}".format(a,b,a-b)
     def multiplicacao(self,a,b):
-        return "{0} x {1} = {2}".format(a,b,a*b)
+        return "{0} x {1} = {2}".format(a, b, a*b)
     def divisao(self,a,b):
-        return "{0} x {1} = {2}".format(a,b,a/b)
+        return "{0} / {1} = {2}".format(a,b,a/b)
     def expoenciacao(self,a):
         return '{0} ** {1} = {2}'.format(a,a,a**a)
 #Pyro4.Daemon armazena a lógica do servidor e envia chamadas de método remoto recebidas para os objetos recomendados
