@@ -23,11 +23,11 @@ while(n>0):
     elif(c==2):
         print(Cliente.subtracao(a,b))
     elif(c==3):
-        print(Cliente.multiplicacao)
+        print(Cliente.multiplicacao(a,b))
     elif(c==4):
-        print(Cliente.divisao)
+        print(Cliente.divisao(a,b))
     elif(c==5):
-        print(Cliente.expoenciacao)
+        print(Cliente.expoenciacao(a))
     else: 
         print("Opção inválida, tente novamente!")
 
