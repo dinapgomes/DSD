@@ -7,8 +7,10 @@ var logger = require('morgan');
 app.use(logger('dev'));
 
 function selectProxyHost(req) {
-    if (req.path.startsWith('/clube')){
-        return 'http://localhost:3001/clube';
+   // var endereco = prompt(("Digite uma porta:" ));  - terminal do codespace não tem interação com promp
+    var endereco = 3001
+    if (endereco == 3000){
+        return 'http://localhost:3000/clube';
     }
     else
      return 'http://localhost:3001/pais';
