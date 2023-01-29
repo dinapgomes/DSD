@@ -5,6 +5,7 @@ from channels.generic.websocket import WebsocketConsumer
 
 
 class ChatConsumer(WebsocketConsumer):
+    '''Classe consumidora para lidar com eventos de conexão'''
     def connect(self):
         self.accept()
 
