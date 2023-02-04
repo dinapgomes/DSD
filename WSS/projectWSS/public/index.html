@@ -4,6 +4,7 @@
 
 <head>
 
+
     <meta charset="UTF-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,6 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js" ></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 
@@ -34,11 +36,11 @@
 
     <script type="text/javascript">
 
-        // 1. Inicializa uma nova conexão socket
+        //  Socket.io Inicializa uma nova conexão socket
 
         var socket = io('http://localhost:3000');
 
-        // Formata o objeto message para ser exibido na tela
+        // Formata o objeto que  será exibido na tela
 
         function renderMessage(message) {
 
@@ -48,7 +50,7 @@
 
         }
 
-        // 2. Recebe todas as mensagens já enviadas no chat
+        // Recebe todas as mensagens já enviadas ao chat
 
         socket.on('previousMessage', function(messages) {
 
@@ -60,7 +62,7 @@
 
         });
 
-        // 4. Recebe o objeto emitido pelo servidor (broadcast) para ser exibido
+        //  Pega o objeto emitido pelo servidor (broadcast) para ser exibido
 
         socket.on('receivedMessage', function(message) {
 
@@ -74,7 +76,7 @@
 
             event.preventDefault();
 
-            // Recebe valores do formulario
+            // Recebe valores do formulário
 
             var author = $('input[name=username]').val();
 
@@ -96,7 +98,7 @@
 
                 renderMessage(messageObject);
 
-                // 3. Envia a mensagem para o server
+                //  Envia a mensagem para o servidor
 
                 socket.emit('sendMessage', messageObject);
 
